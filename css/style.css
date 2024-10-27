@@ -1,38 +1,201 @@
-
-
 /*
-CSS RESETS:
- Border box reset:
-https://www.paulirish.com/2012/box-sizing-border-box-ftw/
- 62.5% Fix: https: //www.aleksandrhovhannisyan.com/blog/62-5-percent-font-size-trick/
+COLOR PALETTE
+
+Dark green    #3c8453
+Sandy beige   #bcaa96
+Dark gray     #222222
+Light gray    #d3d4d6
+Off-white     #f6f6f6
+*/
+
+/* GLOBAL STYLES 
+------------------------------------*/
+/* 
+  https://www.paulirish.com/2012/box-sizing-border-box-ftw/
 */
 
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+
 }
 
-
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
 
-
-html,
-body {
+html, body {
   height: 100%;
-}
-
+  margin: 0; 
+} 
 
 body {
-   font-size: 1.6rem;
-  /* font-size 1.6rem is now the same as 16px */
-  line-height: 1.6;
+  background: #f6f6f6; 
+}
+
+/* links */
+a {
+  color:#3c8453;  
+}
+a:hover {
+  color:#bcaa96;  
+  text-decoration: none;
+}
+footer a{
+   color: #bcaa96; 
+}
+
+footer a:hover {
+   color: #3c8453; 
+}
+.btn { 
+background: #3c8453;
+color:#f6f6f6; 
+text-decoration: none; 
+}
+
+.content-wrapper {
+margin: 0 auto;
+padding: 30px; 
+max-width: 900px; 
+
+
+}
+
+/* HOME
+------------------------------------*/
+.home {
+  background:url(../imagesfolder/laptop.jpg)no-repeat; 
+  background-size: cover; 
+  display: flex;
+  flex-direction: column;
+}
+
+.home .content-wrapper {
+flex: 1 0 auto; 
+}
+
+.content-bg {
+background: rgb(255 255 255 / 0.9);
+padding: 30px; 
 }
 
 
+
+
+/* RESUME
+------------------------------------*/
+.resume header::before {
+  background: url(../imagesfolder/laptop.jpg) center; 
+  background-size: cover;
+  content: "";
+  display: block;
+  height: 375px;
+}
+
+.project-section  {
+ margin-bottom: 60px;
+
+}
+
+.project-section h2 {
+  border-bottom: 2px dashed #d3d4d6;
+
+}
+
+#box-container {
+width: 900px;
+height: 200px;
+}
+
+.box1img {
+float: left;
+width:10px; 
+height: 10px;
+
+}
+
+.download-link {
+  position: fixed;
+  top: 5px; 
+  left: 5px; 
+
+}
+
+.project-item li{
+margin: 10px 0px 0 0; 
+
+}
+
+
+
+
+/* Profile 
+------------------------------------*/
+.project-item {
+  display: flow-root; 
+  margin: 10px 0; 
+}
+
+.project-item img {
+  width: 300px; 
+  float: left; 
+  margin-right: 20px;  
+  
+}
+
+
+
+/* Projects
+------------------------------------*/
+
+
+/* Work Experience
+------------------------------------*/
+
+.work-item {
+display: grid;
+grid-template-columns: 300px 1fr;
+column-gap: 20px;
+}
+
+.work-summary { 
+margin: 50px 0 0 0;
+
+}
+
+/* Education
+------------------------------------*/
+
+
+/* FOOTER 
+------------------------------------*/
+
+footer {
+background: #222; 
+color:#d3d4d6;
+display: flex; /* in a row */
+justify-content: space-between;
+padding: 0 20px; 
+}
+
+.socials {
+list-style-type: none;
+padding: 0; 
+}
+
+.socials li {
+  display: inline-block;
+  margin-left: 10px;
+  }
+
+.socials img {
+width: 32px;
+}
+
+.socials img:hover{
+ opacity: 0.5;
+
+}
