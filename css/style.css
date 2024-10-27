@@ -1,3 +1,11 @@
+
+
+/* ////////
+
+ */
+
+
+ 
 /*
 COLOR PALETTE
 
@@ -13,17 +21,12 @@ Off-white     #f6f6f6
 /* 
   https://www.paulirish.com/2012/box-sizing-border-box-ftw/
 */
-
-
 html {
   box-sizing: border-box;
-
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
-  margin: 0;
-  padding: 0;
 }
 
 html, body {
@@ -40,7 +43,7 @@ a {
   color:#3c8453;  
 }
 a:hover {
-  color:#bcaa96;  
+  color:#eb8a8a;   
   text-decoration: none;
 }
 footer a{
@@ -64,6 +67,19 @@ max-width: 900px;
 
 }
 
+/* three.js */
+
+#three-container { 
+position: fixed;
+top: 0; 
+left: 0; 
+
+}
+
+
+
+
+
 /* HOME
 ------------------------------------*/
 .home {
@@ -84,7 +100,6 @@ padding: 30px;
 
 
 
-
 /* RESUME
 ------------------------------------*/
 .resume header::before {
@@ -95,41 +110,45 @@ padding: 30px;
   height: 375px;
 }
 
+
+/* 
+
 .project-section  {
- margin-bottom: 60px;
-
-}
-
-.project-section h2 {
-  border-bottom: 2px dashed #d3d4d6;
-
-}
-
-#box-container {
-width: 900px;
-height: 200px;
-}
-
-.box1img {
-float: left;
-width:10px; 
-height: 10px;
-
-}
-
-.download-link {
-  position: fixed;
-  top: 5px; 
-  left: 5px; 
-
-}
-
-.project-item li{
-margin: 10px 0px 0 0; 
-
-}
-
-
+  margin-bottom: 60px;
+ 
+ }
+ 
+ .project-section h2 {
+   border-bottom: 2px dashed #d3d4d6;
+ 
+ }
+ 
+ #box-container {
+ width: 900px;
+ height: 200px;
+ }
+ 
+ .box1img {
+ float: left;
+ width:10px; 
+ height: 10px;
+ 
+ }
+ 
+ .download-link {
+   position: fixed;
+   top: 5px; 
+   left: 5px; 
+ 
+ }
+ 
+ 
+ 
+ .project-item li{
+ margin: 10px 0px 0 0; 
+ 
+ }
+  */
 
 
 /* Profile 
@@ -140,9 +159,9 @@ margin: 10px 0px 0 0;
 }
 
 .project-item img {
-  width: 300px; 
+  width: 400px; 
   float: left; 
-  margin-right: 20px;  
+  margin-right: 20px;   
   
 }
 
@@ -150,7 +169,33 @@ margin: 10px 0px 0 0;
 
 /* Projects
 ------------------------------------*/
-
+.Project {
+  width: 900px; 
+  height: 400px;
+  
+  }
+  
+  .columnleft {
+  width: 400px; 
+  height: 300px;
+  float: left;
+  margin-top: 30px;
+  }
+  
+  .columnleft img {
+  width:400px;
+  height: 300px; 
+  }
+  
+  .columnright {
+  width: 400px; 
+  height: 300px;
+  float: right;
+  margin-top: 0px;
+  }
+  
+  
+  
 
 /* Work Experience
 ------------------------------------*/
@@ -169,10 +214,15 @@ margin: 50px 0 0 0;
 /* Education
 ------------------------------------*/
 
-
+.edu {
+  display: block;
+  margin-top: 40px; 
+  margin-bottom: 30px;
+  }
+  
+  
 /* FOOTER 
 ------------------------------------*/
-
 footer {
 background: #222; 
 color:#d3d4d6;
@@ -184,6 +234,7 @@ padding: 0 20px;
 .socials {
 list-style-type: none;
 padding: 0; 
+
 }
 
 .socials li {
