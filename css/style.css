@@ -83,7 +83,7 @@ left: 0;
 /* HOME
 ------------------------------------*/
 .home {
-  background:url(../imagesfolder/laptop.jpg)no-repeat; 
+  background:url(../imagesfolder/bg-coffee-shop.jpg)no-repeat; 
   background-size: cover; 
   display: flex;
   flex-direction: column;
