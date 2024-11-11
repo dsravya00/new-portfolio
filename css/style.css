@@ -383,32 +383,34 @@ input[type=submit]:hover {
 /* FOOTER 
 ------------------------------------*/
 footer {
-background: #222; 
-color:#d3d4d6;
-display: flex; /* in a row */
-justify-content: space-between;
-padding: 0 20px; 
-}
-
-.socials {
-list-style-type: none;
-padding: 0; 
-
-}
-
-.socials li {
-  display: inline-block;
-  margin-left: 10px;
+  background: #222; 
+  color:#d3d4d6;
+  display: flex; /* in a row */
+  justify-content: space-between;
+  padding: 0 20px; 
   }
-
-.socials img {
-width: 32px;
-
-}
-
-.socials img:hover{
- opacity: 0.5;
-
-}
-
+  
+  .socials {
+  list-style-type: none;
+  padding: 0; 
+  
+  }
+  
+  .socials li {
+    display: inline-block;
+    margin-left: 10px;
+    }
+  
+  .socials img {
+  width: 32px;
+  
+  }
+  
+  .socials img:hover{
+   opacity: 0.5;
+  
+  }
+  
+  
+  
 
