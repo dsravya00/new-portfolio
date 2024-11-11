@@ -335,10 +335,17 @@ margin: 50px 0 0 0;
 /* Contact Page
 ------------------------------------ */
 
+#two-columns{
+width: 900px;
+columns: 2;
+margin-bottom: 40px;
+
+}
+
 .container {
 display: block;
 align-content: center;
-width: 900px;
+width: 500px;  
 margin-left: 160px; 
 margin-bottom: 40px; 
 font-family: Arial, Helvetica, sans-serif; 
@@ -373,11 +380,29 @@ input[type=submit] {
 
 }
 
+
 /* submit button */
 input[type=submit]:hover {
   background-color: black;
 
 }
+
+.container2 {
+width:400px; 
+display: block;
+
+/* align-content: center; */
+width: 500px;  
+margin-left: 250px; 
+/* margin-bottom: 30px;  */
+font-family: Arial, Helvetica, sans-serif; 
+border-radius: 20px;
+background-color:#ccc;
+padding: 30px;  
+
+
+}
+
 
 
 /* FOOTER 
