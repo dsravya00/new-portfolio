@@ -115,7 +115,8 @@ max-width: 900px;
 /* HOME
 ------------------------------------*/
 .home {
-  background:url(../imagesfolder/laptop.jpg)no-repeat; 
+  /* background:url(../imagesfolder/laptop.jpg)no-repeat;  */
+  background-color: #000;
   background-size: cover; 
   display: flex;
   flex-direction: column;
@@ -167,6 +168,24 @@ nav a {
   text-decoration: none;
   display: flex;
   align-items: center;
+}
+
+
+/* Set full-screen container for particles */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;  /* Ensure particles are behind the content */
+}
+/* Content styling */
+.content-wrapper {
+  position: relative;
+  z-index: 1;  /* Ensure content is above particles */
+  padding: 30px;
+  /* text-align: center; */
 }
 
 /* 

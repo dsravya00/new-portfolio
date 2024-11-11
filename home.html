@@ -8,7 +8,103 @@
     <link rel="html" href="project.html">
     <!-- //add another page  -->
 
-  </head>
+
+
+      <!-- Div that will hold the particles -->
+    <div id="particles-js"></div>
+  
+      <div class="content-wrapper">
+          <header>
+      
+
+  
+      <!-- Particles.js Script -->
+      <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+      <script>
+          particlesJS('particles-js', {
+              "particles": {
+                  "number": {
+                      "value": 100,   // Number of particles
+                      "density": {
+                          "enable": true,
+                          "value_area": 800   // Density of particles
+                      }
+                  },
+                  "color": {
+                      "value": "#ffffff"   // Particle color (white)
+                  },
+                  "shape": {
+                      "type": "circle",  // Shape of particles
+                      "stroke": {
+                          "width": 0,    // Stroke width for particles
+                          "color": "#000" // Stroke color
+                      }
+                  },
+                  "opacity": {
+                      "value": 0.5,    // Particle opacity
+                      "random": false, // Non-random opacity
+                      "anim": {
+                          "enable": true,   // Animation enabled
+                          "speed": 1,       // Speed of opacity animation
+                          "opacity_min": 0.1,  // Minimum opacity
+                          "sync": false      // Disable sync between particles
+                      }
+                  },
+                  "size": {
+                      "value": 3,    // Size of particles
+                      "random": true, // Random size for particles
+                      "anim": {
+                          "enable": false // Disable animation for size
+                      }
+                  },
+                  "line_linked": {
+                      "enable": true,  // Line linking between particles
+                      "distance": 150, // Distance between particles
+                      "color": "#ffffff", // Line color
+                      "opacity": 0.4,    // Line opacity
+                      "width": 1         // Line width
+                  },
+                  "move": {
+                      "enable": true, // Enable particle movement
+                      "speed": 4,     // Speed of movement
+                      "direction": "none",  // No specific direction
+                      "random": false,  // Non-random direction
+                      "straight": false, // Non-straight movement
+                      "out_mode": "out",  // Particles go out of the screen
+                      "bounce": false,    // Disable bounce
+                      "attract": {
+                          "enable": false,   // Disable attraction effect
+                          "rotateX": 600,    // Attraction strength
+                          "rotateY": 1200    // Attraction strength
+                      }
+                  }
+              },
+              "interactivity": {
+                  "detect_on": "canvas",  // Interactivity on canvas
+                  "events": {
+                      "onhover": {
+                          "enable": true,   // Enable hover effect
+                          "mode": "repulse" // Repulsion on hover
+                      },
+                      "onclick": {
+                          "enable": true,   // Enable click effect
+                          "mode": "push"    // Push new particles on click
+                      },
+                      "resize": true // Resize particles on window resize
+                  }
+              },
+              "retina_detect": true // Retina display support
+          });
+      </script>
+ 
+  
+
+
+
+
+
+
+
 
   <body class="home">
     <!-- //  INTRO  // -->
@@ -26,7 +122,7 @@
           <!-- //  ABOUT ME  // -->
           <main>
             <!-- Start content edits below this line. -->
-            <!-- /!Add your "about me" summary here. Add more paragraphs or links as needed. Here is some dummy text> -->
+          
           </p>Currently, I am studying at San Jose State University, pursuing my career with a BFA in Digital Media Arts.  With a few years of experience in graphic and web design, I have acquired the skills to understand requirements according to the latest trends. My interest in art and design became a focus of my career, so I decided to make it my job. During my internship, I learned how to make graphic design things like brochures, logos, and websites. I also learned how to use social media and promote businesses to help with products or services.</p><a href="resume.html">Infromation about me</a> 
 
             <p>To learn more about my work history, check out my 
@@ -34,9 +130,18 @@
             
 
             <!-- End content edits here. -->
+
           </main>
+        </div>
+   
       </div>
     </div>
+
+
+
+
+
+
     <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
     <footer>
       <!-- Start content edits below this line. -->
@@ -65,7 +170,10 @@
   </body>
 </html>
 
-<script type="importmap">
+
+
+
+<!-- <script type="importmap">
 
   {
     "imports": {
@@ -74,7 +182,7 @@
     }
   }
 
-</script>
+</script> -->
 
 
 
