@@ -543,6 +543,7 @@ footer {
 .socials {
   list-style-type: none;
   padding: 0;
+  
 }
 
 .socials li {
@@ -559,13 +560,14 @@ footer {
 }
 
 footer p {
-  margin: 0;
+  margin: 20px;
 }
 
 /* Styling Links and Buttons */
 a {
   color: #3c8453;
   text-decoration: none;
+
 }
 
 a:hover {
@@ -574,6 +576,7 @@ a:hover {
 
 footer a {
   color: #bcaa96;
+
 }
 
 footer a:hover {
