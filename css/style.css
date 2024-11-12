@@ -19,6 +19,7 @@ body, html, #app {
   margin: 0;
   width: 100%;
   height: 100%;
+  font-family:'montserrat';
 }
 
 #app {
@@ -377,7 +378,7 @@ margin: 10px, 0, 0, 0;
 
 .Project-item {
   display: flow-root; 
-  /* margin: 10px 0;*/
+  margin: 10px 0;
 }
 
 .grid-container { 
@@ -387,7 +388,7 @@ margin: 10px, 0, 0, 0;
   padding: 20px;
   width: 80px;
   /* height: 300px; */
-  /* align-items: center; */
+  align-items: center;
 } 
 
 
@@ -521,37 +522,73 @@ padding: 30px;
 
 
 
+
+
 /* FOOTER 
 ------------------------------------*/
+
+/* Footer */
 footer {
-  background: #222; 
-  color:#d3d4d6;
-  display: flex; /* in a row */
+  background: #222;
+  color: #d3d4d6;
+  display: flex;
   justify-content: space-between;
-  padding: 0 20px; 
-  }
-  
-  .socials {
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: auto;
+}
+
+.socials {
   list-style-type: none;
-  padding: 0; 
-  
-  }
-  
-  .socials li {
-    display: inline-block;
-    margin-left: 10px;
-    }
-  
-  .socials img {
+  padding: 0;
+}
+
+.socials li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.socials img {
   width: 32px;
-  
-  }
-  
-  .socials img:hover{
-   opacity: 0.5;
-  
-  }
-  
-  
-  
+}
+
+.socials img:hover {
+  opacity: 0.7;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Styling Links and Buttons */
+a {
+  color: #3c8453;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #bcaa96;
+}
+
+footer a {
+  color: #bcaa96;
+}
+
+footer a:hover {
+  color: #3c8453;
+}
+
+/* .btn {
+  background: #3c8453;
+  color: #f6f6f6;
+  text-decoration: none;
+} */
+
+/* Making the Footer Stick to Bottom */
+/* html, body {
+  display: flex;
+  flex-direction: column;
+} */
 
