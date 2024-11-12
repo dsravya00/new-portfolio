@@ -198,9 +198,10 @@ text-decoration: none;
 
 .content-wrapper {
  
-margin: 0 auto;
+margin-left: 60px;
+margin-right: 60px;
 padding: 30px; 
-width: 900px; 
+/* width: 900px;  */
 
 
 }
