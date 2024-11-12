@@ -3,92 +3,98 @@
 // Basic Three.JS scene from documentation, importing Three.JS through a CDN 
 // https://threejs.org/docs/#manual/en/introduction/Creating-a-scene
 
-
-//~~~~~~~Import Three.js (also linked to as an import map in the HTML)~~~~~~
+// Import Three.js and add-ons
 import * as THREE from 'three';
-
-
-// Import add-ons
 import { OrbitControls } from 'https://unpkg.com/three@0.162.0/examples/jsm/controls/OrbitControls.js';
-// import { GLTFLoader } from 'https://unpkg.com/three@0.162.0/examples/jsm/loaders/GLTFLoader.js'; // to load 3d models
+import { GLTFLoader } from 'https://unpkg.com/three@0.162.0/examples/jsm/loaders/GLTFLoader.js';
 
-
-
-let scene, camera, renderer, cube; 
+// Declare global variables
+// Declare global variables
+let scene, camera, renderer, squareballs, mixer; // Add 'mixer' for animation
+let scrollAmount = 0;
 
 function init() {
+    // Scene setup
+    scene = new THREE.Scene();
+    scene.background = new THREE.
+	Color(0xFFFFFF);  // White background
 
-// ~~~~~~~~~~~~~~~~Set up scene, camera, + renderer~~~~~~~~~~~~~~~~
+    // Camera setup
+    camera = new THREE.PerspectiveCamera(20, 15 / 10, 0.1, 1000);
+	// PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.set(100,150,100);  // Adjusted camera position to view the model
+	// camera.position.set(100,150,100);  // Adjusted camera position to view the model
 
-scene = new THREE.Scene();
-camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    // Renderer setup
+    renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.getElementById("scene-container").appendChild(renderer.domElement);
 
-renderer = new THREE.WebGLRenderer( {antialias: true} );
-renderer.setSize(window.innerWidth, window.innerHeight);
+    // Lighting setup
+    const light = new THREE.DirectionalLight(0xffffff, 3);
+    light.position.set(1, 1, 5);  // Position light to properly illuminate the model
+    scene.add(light);
 
-document.querySelector("#three-container").appendChild(renderer.domElement);
+    // OrbitControls for rotating the scene
+    const controls = new OrbitControls(camera, renderer.domElement);
 
+    // GLTFLoader to load 3D model
+    const loader = new GLTFLoader();
 
+    // Load the 3D model and its animation
+    loader.load('assets/sqaureballs/sqaureballs.gltf', function(gltf) {
+        squareballs = gltf.scene;  // Store the loaded model
+        scene.add(squareballs);    // Add the model to the scene
+        squareballs.scale.set(5, 5, 5);  // Scale the model to fit the view
 
-// ~~~~~~~~~~~~~~~~ Initiate add-ons ~~~~~~~~~~~~~~~~
+        // Initialize the AnimationMixer
+        mixer = new THREE.AnimationMixer(squareballs);
 
-const controls = new OrbitControls(camera, renderer.domElement);
-// const loader = new GLTFLoader(); // to load 3d models
+        // Loop through all animations in the GLTF file and add them to the mixer
+        gltf.animations.forEach((clip) => {
+            mixer.clipAction(clip).play();  // Play the first animation found
+        });
 
+    }, undefined, function(error) {
+        console.error('Error loading model:', error);
+    });
 
+    // Window resize event
+    window.addEventListener('resize', onWindowResize, false);
 
-// ~~~~~~~~~~~~~~~~ Create Geometry ~~~~~~~~~~~~~~~~
-const geometry = new THREE.BoxGeometry(1, 1, 1);
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-// const texture = new THREE.textureLoader().load(texture/);
-// const material = new THREE.MeshBasicMaterial({ map: texture}); 
-cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
+    // Scroll event to move model with scroll
+    window.addEventListener('wheel', function(event) {
+        scrollAmount = event.deltaY * 0.01;  // Adjust scroll speed multiplier
+    });
 
-
-
-// ~~~~~~~~~~~~~~~~Position Camera~~~~~~~~~~~~~~~~
-camera.position.z = 5;  
-
+    // Start the animation loop //given animation loop
+    animate();
 }
 
-
-
-// ~~~~~~~~~~~~~~~~ Animation Loop ~~~~~~~~~~~~~~~~
-// (similar to draw loop in p5.js, updates every frame)
-
 function animate() {
-    requestAnimationFrame(animate); // start loop by with frame update
+    requestAnimationFrame(animate);
 
-    // →→→→→→ add your animation here ↓↓↓↓
+    // Update the animation mixer to play the loaded animations
+    if (mixer) {
+        mixer.update(0.01); // The value passed to update controls the speed of the animation
+    }
 
-    camera.position.z += .03;
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
-
-
-
-    // always end animation loop with renderer
+    // Render the scene
     renderer.render(scene, camera);
 }
 
+// Resize event to adjust camera and renderer on window resize
 function onWindowResize() {
-camera.aspect = window.innerWidth / window/innerHeight; 
-camera.updateProjectionMatrix(); 
-renderer.setSize(window.innerWidth, window.innerHeight);
-
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
-
-window.addEventListener( 'resize', onWindowResize, false);
-
+// Initialize the scene and start the animation
 init();
-animate(); // execute animation function
 
 
-
-
-
-///////
-
-
+// const geometry = new THREE.BoxGeometry(1, 1, 1);
+// const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+// squareballs = new THREE.Mesh(geometry, material);
+// scene.add(squareballs);

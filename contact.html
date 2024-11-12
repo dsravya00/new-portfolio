@@ -1,44 +1,70 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
-    <!-- Responsive website (resizes for mobile) -->
-  
-    <title>Contact| Sravya Duvvuri | Student at SJSU</title>
-    <link rel="stylesheet" href="css/style.css"> 
-  <link rel="html" href="project.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact | Sravya Duvvuri | Student at SJSU</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <script type="module" src="main.js/p5.js" defer></script> -->
 
-
-  </head>
-  <body class="resume">
-    <a class = "btn download-link" href="resume-sravyaduvvuri.pdf">Download PDF</a>
-
+  </style>
     
-    <!-- //  INTRO  // -->
+  <!-- use an import map to link to the Three.js CDN -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.162.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.162.0/examples/jsm/"
+      }
+    }
+  </script>
 
-     
+  <!-- Link to your Javascript file as a type="module", this will execute the file after the HTML is loaded -->
+  <script type="module" src="main.js/p5.js"></script>
+  
+</head>
+
+<body>
+
+  
+    <!-- Scene container for Three.js -->
+    <div id="scene-container"></div>
+<!-- Animation behind -->
+
+    <!-- Content -->
+    <a class="btn download-link" href="resume-sravyaduvvuri.pdf">Download PDF</a>
+
+    <body class="resume">
+    
+      <a class = "btn download-link" href="resume-sravyaduvvuri.pdf">Download PDF</a>
+  
+    
+      <!-- //  INTRO  // -->
+  
+
+
+
     <header>
-      <div id="wrapper"> 
-          
-        <div class="content-wrapper">
-        <!-- Start content edits below this line. -->
-        <h1>Contact me</h1>
-      
-        <!-- End content edits here. -->
+        <div id="wrapper">
+            <div class="content-wrapper">
+                <h1>Contact me</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="project.html">Project</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
 
-        <nav> 
-          <li><a href="home.html">Home</a></li>
-          <li><a href="project.html">Project</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="contact.html">Contact</a></li>
-      
-      </div>
-       </nav>
-    </header>
 
-    <main>
+    
+
   
 
 <!-- start code of contanct form  -->
@@ -65,38 +91,10 @@
 
 <div class="container2">
 
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, eos accusantium quam asperiores, autem nostrum hic perferendis nihil necessitatibus deserunt cupiditate assumenda minima obcaecati accusamus iusto omnis doloremque. Eligendi, beatae?</p>
+<p>Using the deatils below, I am happy to reach out and send me a message whether you wish to discuss new ideas or have a project for me, simply fill this form and I’ll get back to you soon...</p>
 
 
 </div>
-
-
-<!-- <h2>Two Equal Columns</h2>
-
-<div class="row">
-  <div class="column" style="background-color:#aaa;">
-    <h2>Column 1</h2>
-    <p>Some text..</p>
-  </div>
-  <div class="column" style="background-color:#bbb;">
-    <h2>Column 2</h2>
-    <p>Some text..</p>
-  </div>
-</div> -->
-
-<!-- .column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-} -->
   
 </div>
     
@@ -145,3 +143,4 @@
       
       <!-- End content edits here. -->
     </footer>
+

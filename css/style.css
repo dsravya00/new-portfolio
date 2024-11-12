@@ -44,7 +44,7 @@ body, html, #app {
   margin-top: 10px;
   display: inline-block;
   text-decoration: none;
-  color: #fff;
+  /* color: #fff; */
 }
 
 #app canvas {
@@ -55,6 +55,100 @@ body, html, #app {
 }
 
 
+/* canvas {
+  width: 100%;
+  height: 100%; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1; 
+  /* if you want the text on top of it then change it into postitive. if not change it to background which is negative value (so that can see the text) 
+  /* pointer-events: none;  
+  }  
+  
+/* #scene-container {
+  /* background-color: black;*/
+  /* width: 800px; 
+  height: 1000px; 
+  margin: 20 auto;  */
+  /* color: aliceblue; } */
+
+/* 
+#scene-container p{
+margin: 20px ;
+
+} */
+
+/* three.js */
+/* Global styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#scene-container {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;  /* Put the Three.js scene behind other content */
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Content wrapper to position content above the Three.js scene */
+.content-wrapper {
+  position: relative;
+  z-index: 1;  /* Ensure content is above the Three.js scene */
+  /* padding: 30px; */
+  /* color: white; */
+  /* text-align: center; */
+}
+
+/* Header and navigation */
+/* header {
+  background-color: #222;
+  padding: 10px;
+} 
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+
+} */
+
+nav a {
+  /* color: black; */
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav a:hover {
+  background-color: #444;
+  border-radius: 10px;
+} 
+
+/* Footer
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+} */
 
 
 
@@ -74,10 +168,10 @@ html, body {
   height: 100%;
   margin: 0; 
 } 
-
-body {
+/* this give grey color background in the bottom */
+/* body {
   background: #f6f6f6; 
-}
+} */
 
 /* links */
 a {
@@ -116,7 +210,7 @@ max-width: 900px;
 ------------------------------------*/
 .home {
   /* background:url(../imagesfolder/laptop.jpg)no-repeat;  */
-  background-color: #000;
+  background-color:darkgrey;
   background-size: cover; 
   display: flex;
   flex-direction: column;
@@ -185,6 +279,7 @@ nav a {
   position: relative;
   z-index: 1;  /* Ensure content is above particles */
   padding: 30px;
+
   /* text-align: center; */
 }
 
@@ -192,6 +287,8 @@ nav a {
 nav a:hover{
 
 } */
+
+
 
 
 /* RESUME
@@ -354,6 +451,8 @@ margin: 50px 0 0 0;
 /* Contact Page
 ------------------------------------ */
 
+
+
 #two-columns{
 width: 900px;
 columns: 2;
@@ -409,9 +508,7 @@ input[type=submit]:hover {
 .container2 {
 width:400px; 
 display: block;
-
 /* align-content: center; */
-width: 500px;  
 margin-left: 250px; 
 /* margin-bottom: 30px;  */
 font-family: Arial, Helvetica, sans-serif; 
