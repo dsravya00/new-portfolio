@@ -324,7 +324,7 @@ margin: 30px;
   }
   
 
-/* top image */
+/* top image-resume */
 .resume header::before { 
   background: url(../imagesfolder/laptop.jpg) center; 
   background-size: cover;
@@ -374,6 +374,16 @@ margin: 10px, 0, 0, 0;
 
 /* Projects
 ------------------------------------*/
+
+
+/* top image-project.html */
+.image2 header::before { 
+  background: url(../imagesfolder/bg-home-office-studio.jpg) center; 
+  background-size: cover;
+  content: "";
+  display: block;
+  height: 375px;
+}
 
 
 .Project-item {
