@@ -197,6 +197,11 @@ text-decoration: none;
 }
 
 .content-wrapper {
+margin-left: 40px;
+margin-right: 40px;
+}
+
+.content-wrapper1 {
  
 margin-left: 60px;
 margin-right: 60px;
@@ -206,6 +211,11 @@ padding: 30px;
 
 }
 
+.content-wrapper1 h1{
+margin-left: -180px ;
+
+
+}
 
 
 /* HOME
