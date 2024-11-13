@@ -553,7 +553,7 @@ padding: 30px;
 
 footer {
   position: relative;
-  top: 100vh;  /*Pushes footer below the viewport*/
+  top: 100vh;  /* Pushes footer below the viewport */
   background-color: #333;
   color: white;
   text-align: center;
