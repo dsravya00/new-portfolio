@@ -85,7 +85,7 @@ margin: 20px ;
 body, html {
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: 70%;
   width: 100%;
 }
 
@@ -549,6 +549,17 @@ padding: 30px;
 ------------------------------------*/
 
 /* Footer */
+
+
+footer {
+  position: relative;
+  top: 100vh;  /*Pushes footer below the viewport*/
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+/* 
 footer {
   background: #222;
   color: #d3d4d6;
@@ -559,7 +570,7 @@ footer {
   bottom: 0;
   width: 100%;
   margin-top: auto;
-}
+} */
 
 .socials {
   list-style-type: none;
