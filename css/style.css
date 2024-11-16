@@ -1,12 +1,13 @@
 /*
 COLOR PALETTE
 
-Dark green    #3c8453
+yellow shade  #d4ae25 
 Sandy beige   #bcaa96
 Dark gray     #222222
 Light gray    #d3d4d6
 Off-white     #f6f6f6
 */
+
 
 /* GLOBAL STYLES 
 ------------------------------------*/
@@ -19,42 +20,8 @@ body, html, #app {
   margin: 0;
   width: 100%;
   height: 100%;
-  font-family:'montserrat';
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
-#app {
-  overflow: hidden;
-  touch-action: pan-up;
-  color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
-  text-shadow: 0 0 5px #ffffff, 0 0 20px #000, 0 0 30px #000;
-}
-
-#app h1 {
-  --fontSize: 60px;
-  --lineHeight: 80px;
-  width: auto;
-  height: calc(2 * var(--lineHeight));
-  line-height: var(--lineHeight);
-  margin: calc(50vh - var(--lineHeight)) auto 0;
-  font-size: var(--fontSize);
-}
-
-#app a {
-  margin-top: 10px;
-  display: inline-block;
-  text-decoration: none;
-  /* color: #fff; */
-}
-
-#app canvas {
-  display: block;
-  position: fixed;
-  z-index: -1;
-  top: 0;
-}
-
 
 /* canvas {
   width: 100%;
@@ -107,7 +74,8 @@ canvas {
 /* Content wrapper to position content above the Three.js scene */
 .content-wrapper {
   position: relative;
-  z-index: 1;  /* Ensure content is above the Three.js scene */
+  z-index: 1; 
+   /* Ensure content is above the Three.js scene */
   /* padding: 30px; */
   /* color: white; */
   /* text-align: center; */
@@ -128,14 +96,16 @@ nav ul {
 } */
 
 nav a {
-  /* color: black; */
+  color: rgb(255, 255, 255);
   text-decoration: none;
   padding: 10px;
 }
 
 nav a:hover {
-  background-color: #444;
+  background-color: #ffffff;
   border-radius: 10px;
+  padding: 20px; 
+
 } 
 
 /* Footer
@@ -176,18 +146,18 @@ html, body {
 
 /* links */
 a {
-  color:#3c8453;  
+  color: #03245c;
 }
 a:hover {
-  color:#bcaa96;  
+  color: grey;   
   text-decoration: none;
 }
 footer a{
-   color: #bcaa96; 
+   color: #ffffff; 
 }
 
 footer a:hover {
-   color: #3c8453; 
+   color: rgb(169, 169, 169); 
 }
 
 .btn { 
@@ -197,32 +167,20 @@ text-decoration: none;
 }
 
 .content-wrapper {
-margin-left: 40px;
-margin-right: 40px;
-}
-
-.content-wrapper1 {
  
-margin-left: 60px;
-margin-right: 60px;
+margin: 0 auto;
 padding: 30px; 
-/* width: 900px;  */
-
-
-}
-
-.content-wrapper1 h1{
-margin-left: -145px ;
-
+max-width: 900px; 
 
 }
+
 
 
 /* HOME
 ------------------------------------*/
 .home {
   /* background:url(../imagesfolder/laptop.jpg)no-repeat;  */
-  background-color:darkgrey;
+  background-color:#03245c;
   background-size: cover; 
   display: flex;
   flex-direction: column;
@@ -230,6 +188,7 @@ margin-left: -145px ;
 
 .home .content-wrapper {
 flex: 1 0 auto; 
+
 }
 
 
@@ -242,12 +201,15 @@ padding: 30px;
 #wrapper {
   columns: 2;
   width: 1000px;
-  margin-left: 130px;
+  /* margin-left: 240px; */
+  
   }
   
+
 nav {
 align-items: right;
 /* margin-left: 170px ; */
+/* margin-top: -40px; */
 }
 
 nav li { 
@@ -268,9 +230,9 @@ align-items: center;
 nav a {
   height: 100%;
   width: 100px; 
-  padding: 0 40px; 
+  /* padding: 0 40px; 
   margin-right: -10px;
-  margin-top: 50px;
+  margin-top: 50px; */
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -286,6 +248,7 @@ nav a {
   height: 100%;
   z-index: -1;  /* Ensure particles are behind the content */
 }
+
 /* Content styling */
 .content-wrapper {
   position: relative;
@@ -305,43 +268,67 @@ nav a:hover{
 
 /* RESUME
 ------------------------------------*/
-/* #wrapper h1 {
+.imageontop image{
+width: 100%;
+height: 30%;
+
+}
+
+ #wrapper  {
+margin-top: -100px;
+background:#03245c;
+width: 100%; 
+height: 100px; 
+} 
 
 
-} */
+.name h1{ 
+color:rgb(255, 255, 255); 
+padding-left: 280px;
+padding-top: 20px;
+display: block;
 
-/* .image {
+}
 
+nav {
+padding-top: 30px;
 
-} */
-
-.column{
-/* width: 33.33%; */
-height: 250px;
-columns: 200px;
-width: 500px;
-margin: 30px;
 }
 
 
-.image img{
-    /* float: left; */
-    width: 150px;
-    /* width: 200px; */
-    /* padding: 10px; */
-    height: 100px; 
+.column1{
+/* width: 33.33%; */
+height: 250px;
+columns: 200px;
+width: 170px;
+margin: 30px;
+display: block;
+}
+
+/* .Project1 {
+
+
+} */
+
+
+.project .image img{
+    float: left; 
     margin-block: 10px;
     
   }
   
 
-/* top image-resume */
+/* top image */
 .resume header::before { 
-  background: url(../imagesfolder/laptop.jpg) center; 
+  /* background: url(../imagesfolder/laptop.jpg) center;  */
   background-size: cover;
   content: "";
   display: block;
   height: 375px;
+  z-index: -1; 
+
+
+  
 }
 
 .resume-section  {
@@ -349,11 +336,9 @@ margin: 30px;
 
 }
 
-.resume-section h2 {
-  border-bottom: 2px dashed #d3d4d6;
-
-
-}
+/* .resume-section h2 {
+  /* border-bottom: 2px dashed #d3d4d6; 
+} */
 
 /* .work-details h2{
 margin-top: 30px;
@@ -379,71 +364,87 @@ margin: 10px, 0, 0, 0;
 
 /* Profile 
 ------------------------------------*/
-
+.imageontop img{
+  width: 100%;
+  height: 30%;
+  
+  }
+  
 
 
 
 /* Projects
 ------------------------------------*/
+.Project {
+width: 100%; 
+margin-left: -90px;
 
-
-/* top image-project.html */
-.image2 header::before { 
-  background: url(../imagesfolder/bg-home-office-studio.jpg) center; 
-  background-size: cover;
-  content: "";
-  display: block;
-  height: 375px;
 }
-
 
 .Project-item {
   display: flow-root; 
   margin: 10px 0;
+
 }
 
-.grid-container { 
+/* text */
+.grid-container {  
   display: grid;
   grid-template-columns: auto auto;
   /* background-color: #2196F3; */
-  padding: 20px;
-  width: 80px;
-  /* height: 300px; */
-  align-items: center;
-} 
+  padding-right: 10px;
+  width: 1000px;
+  height: 400px;
+  /* align-items: center; */
 
+} 
+/* Images */
+.grid-container img {
+width: 500px; 
+height: 300px; 
+
+
+
+}
 
 
 .grid-item {
   /* background-color: rgba(255, 255, 255, 0.8); */
   margin-left: 20px;
-  width:200px;
-  /* height: 100px; */
+  width: 250px;
+  height: 900px;
   /* border: 1px solid rgba(0, 0, 0, 0.8); */ 
-  /* padding-top: 20px; */
+  padding-top: 30px;
   font-size: 30px;
   /* text-align: center; */
 }
 
 .grid-item img {
-width:210px;
-/* height:150px;  */
-margin: 10px;
+width:370px;
+height:400px; 
+margin-right: 120px;
+justify-content: space-between;
+display: flex;
 
 }
 
 .paragraph b {
 margin: 0, 10px, 10px, 10px;
-
 }
 
-
+/* text paragraph */
 .paragraph {
 width: 450px;
-height: 150px;
-margin-left: 100px;
+height: 300px;
+margin-left: 300px;
+padding-top: 70px;
 align-items: center;
+font-size: 20px; 
 }
+
+
+
+
 
 
 
@@ -467,163 +468,92 @@ margin: 50px 0 0 0;
 
 
 
-
-
-
 /* Contact Page
 ------------------------------------ */
-
-
-
-#two-columns{
-width: 900px;
-columns: 2;
-margin-bottom: 40px;
+.homeA {
+background-color: white;
 
 }
 
-.container {
-display: block;
-align-content: center;
-width: 500px;  
-margin-left: 160px; 
-margin-bottom: 40px; 
-font-family: Arial, Helvetica, sans-serif; 
-border-radius: 20px;
-background-color:#ccc;
-padding: 30px;  
-
+.content-bg {
+ align-content: center; 
+ margin-top: 100px; 
+ 
 }
 
-
-input[type=text], select, textarea {
-  width: 100%; 
-  padding: 12px; 
-  border: 1px solid #ccc; 
-  box-sizing: border-box;
-  border-radius: 20px; 
-  margin-top: 6px; 
-  margin-bottom: 16px; 
-  resize: vertical;
-
-
-} 
-
-/* submit button */
-input[type=submit] { 
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-
-}
-
-
-/* submit button */
-input[type=submit]:hover {
-  background-color: black;
-
-}
-
-.container2 {
-width:400px; 
-display: block;
-/* align-content: center; */
-margin-left: 250px; 
-/* margin-bottom: 30px;  */
-font-family: Arial, Helvetica, sans-serif; 
-border-radius: 20px;
-background-color:#ccc;
-padding: 30px;  
-
-
-}
-
-
-
-
-
-/* FOOTER 
-------------------------------------*/
-
-/* Footer */
-
-
-footer {
+/* Content wrapper to position content above the Three.js scene */
+.content-wrapperA {
   position: relative;
-  top: 100vh;  /* Pushes footer below the viewport */
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px;
+  z-index: 1; 
+  padding-top: 100px;
+ 
 }
-/* 
-footer {
-  background: #222;
-  color: #d3d4d6;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  position: relative;
-  bottom: 0;
+
+#scene-container {
   width: 100%;
-  margin-top: auto;
-} */
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;  /* Put the Three.js scene behind other content */
+}
 
-.socials {
-  list-style-type: none;
-  padding: 0;
+#wrapper1 {
+width: 100%;
+height: 100%;  
+background-color: none;
+}
+
+.content-wrapper h1{
+margin-right: 100px; 
+
+
+}
+
+
   
-}
+  
+  /* FOOTER 
+  ------------------------------------*/
 
-.socials li {
-  display: inline-block;
-  margin-left: 10px;
-}
 
-.socials img {
-  width: 32px;
-}
+  footer {
+  
+    background: #222; 
+    color:#d3d4d6;
+    display: flex; /* in a row */
+    justify-content: space-between;
+    padding: 0 20px; 
+    }
+    
+  footer p {
+    padding-left: 50px; 
 
-.socials img:hover {
-  opacity: 0.7;
-}
+  }
 
-footer p {
-  margin: 20px;
-}
-
-/* Styling Links and Buttons */
-a {
-  color: #3c8453;
-  text-decoration: none;
-  gap: 10px;
-}
-
-a:hover {
-  color: #bcaa96;
-}
-
-footer a {
-  color: #bcaa96;
-  margin: 20px;
-}
-
-footer a:hover {
-  color: #3c8453;
-}
-
-/* .btn {
-  background: #3c8453;
-  color: #f6f6f6;
-  text-decoration: none;
-} */
-
-/* Making the Footer Stick to Bottom */
-/* html, body {
-  display: flex;
-  flex-direction: column;
-} */
+    .socials {
+    list-style-type: none;
+    padding: 0; 
+    
+    }
+    
+    .socials li {
+      display: inline-block;
+      margin-left: 50px;
+      }
+    
+    .socials img {
+    width: 32px;
+    
+    }
+    
+    .socials img:hover{
+     opacity: 0.5;
+    
+    }
+    
+    
+    
+    
+  
 

@@ -1,149 +1,228 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact | Sravya Duvvuri | Student at SJSU</title>
-    <link rel="stylesheet" href="css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script type="module" src="main.js/p5.js" defer></script> -->
+    <title>Contact | Sravya Duvvuri | Graphic Designer</title>
+    <link rel="stylesheet" href="css/style.css"> 
 
-  </style>
-    
-  <!-- use an import map to link to the Three.js CDN -->
-  <script type="importmap">
-    {
-      "imports": {
-        "three": "https://unpkg.com/three@0.162.0/build/three.module.js",
-        "three/addons/": "https://unpkg.com/three@0.162.0/examples/jsm/"
-      }
-    }
-  </script>
-
-  <!-- Link to your Javascript file as a type="module", this will execute the file after the HTML is loaded -->
-  <script type="module" src="main.js/p5.js"></script>
-  
-</head>
-
-<body>
-
-  
     <!-- Scene container for Three.js -->
-    <div id="scene-container"></div>
-<!-- Animation behind -->
+    <div id="scene-container" style="height: 100vh;"></div>
 
-    <!-- Content -->
+    <!-- Import Three.js via CDN -->
+    <script type="module">
+      import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.162.0/build/three.module.js';
 
-    <!-- <body class="resume"> -->
-    <div class="space"> 
-        <a class = "btn download-link" href="resume-sravyaduvvuri.pdf">Download PDF</a>
+      // Initialize the scene
+      let scene, camera, renderer;
 
-    </div>
-     
-  
-    
-      <!-- //  INTRO  // -->
-  
+      function init() {
+        // Set up the scene
+        scene = new THREE.Scene();
 
+        // Set up the camera
+        camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.z = 5;
 
+        // Set up the renderer
+        renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById("scene-container").appendChild(renderer.domElement);
 
-    <header>
-        <div id="wrapper">
-            <div class="content-wrapper">
-                <h1>Contact me</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="project.html">Project</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <!-- <li><a href="contact.html">Contact</a></li> -->
-                </ul>
-            </nav>
-        </div>
+        // Create cubes with different sizes and colors
+        const geometry = new THREE.BoxGeometry();
 
-
-    
-
-  
-
-<!-- start code of contanct form  -->
-
-<div id="two-columns"> 
-
-        <div class="container">
-
-          <form action="action_page.php">
-
-              <label for="firstname">First Name</label>
-              <input type="text" id="firstname" name="firstname" placeholder="Your name..">
-
-              <label for="lastname">Last Name</label>
-              <input type="text" id="lastname" name="lastname" placeholder="Your last name..">
-
-              <label for="subject">Subject</label>
-              <textarea id="subject" name="subject" placeholder="Comment down here..." style="height:200px"></textarea>
-
-              <input type="submit" value="Submit">
-
-          </form>
-    </div>
-
-<div class="container2">
-
-<p>Feel free and happy to reach out. Find my deatils below and send me a message whether you wish to discuss new ideas or have a project for me, simply fill this form and I’ll get back to you soon...</p>
-
-
-</div>
-  
-</div>
-    
-
-<!--         
-        <div id="app">
-          <div id="hero">
-            <h1>PARTICLES<br/>CURSOR</h1>
-            <a target="_blank" href="https://github.com/klevron/threejs-toys">github/threejs-toys</a>
-          </div>
-        </div> -->
         
-        
-        <!-- End content edits here. -->
-      </section>
+        // Cube 1: white, small size
+        const material1 = new THREE.MeshBasicMaterial({ color: 0xffffff });
+        const cube1 = new THREE.Mesh(geometry, material1);
+        cube1.position.set(-4, 1, 0);  // Position the first cube
+        cube1.scale.set(0.70,0.70,0.70);  // Make it smaller
+        scene.add(cube1);
 
 
-    <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
+        // Cube 2: Blue, medium size
+        const material2 = new THREE.MeshBasicMaterial({ color: 0x03245c });
+        const cube2 = new THREE.Mesh(geometry, material2);
+        cube2.position.set(-3, -2, 0);  // Position the second cube
+        cube2.scale.set(0.40,0.40,0.40);  // Default size
+        scene.add(cube2);
+
+
+        // Cube 3: white, large size
+        const material3 = new THREE.MeshBasicMaterial({ color: 0xffffff });
+        const cube3 = new THREE.Mesh(geometry, material3);
+        cube3.position.set(5, -2, 0);  // Position the third cube
+        cube3.scale.set(0.50,0.50,0.50);  // Make it larger
+        scene.add(cube3);
+
+
+        // Cube 4: Blue
+        const material4 = new THREE.MeshBasicMaterial({ color: 0x03245c });
+        const cube4 = new THREE.Mesh(geometry, material4);
+        cube4.position.set(2, -2, 0);  // Position the fourth cube
+        cube4.scale.set(0.90,0.90,0.90);  
+        scene.add(cube4);
+
+
+
+        // Cube 5: White - right 
+        const material5 = new THREE.MeshBasicMaterial({ color: 0xffffff });
+        const cube5 = new THREE.Mesh(geometry, material5);
+        cube5.position.set(0, -2, 0);  // Position the fourth cube
+        cube5.scale.set(0.30,0.30,0.30);  
+        scene.add(cube5);
+
+
+
+        // Cube 6: Blue - bottom 
+        const material6 = new THREE.MeshBasicMaterial({ color: 0x03245c });
+        const cube6 = new THREE.Mesh(geometry, material6);
+        cube6.position.set(4, 0, 1);  // Position the fourth cube
+        cube6.scale.set(0.30,0.30,0.30);  
+        scene.add(cube6);
+
+
+
+        // Cube 7: White
+        const material7 = new THREE.MeshBasicMaterial({ color: 0xffffff });
+        const cube7 = new THREE.Mesh(geometry, material7);
+        cube7.position.set(2, 1, 0);  // Position the fourth cube
+        cube7.scale.set(0.30,0.30,0.30);  
+        scene.add(cube7);
+
+
+
+        // Cube 8: Blue - left 
+        const material8 = new THREE.MeshBasicMaterial({ color: 0x03245c });
+        const cube8 = new THREE.Mesh(geometry, material8);
+        cube8.position.set(-3, 2, 2);  // Position the fourth cube
+        cube8.scale.set(0.30,0.30,0.30);  
+        scene.add(cube8);
+
+
+
+        // Cube 9: White - right side 
+        const material9 = new THREE.MeshBasicMaterial({ color: 0xffffff });
+        const cube9 = new THREE.Mesh(geometry, material9);
+        cube9.position.set(4, 2, 1);  // Position the fourth cube
+        cube9.scale.set(0.50,0.50,0.50);  
+        scene.add(cube9);
+
+
+
+        // Cube 10: Blue - top 
+        const material10 = new THREE.MeshBasicMaterial({ color: 0x03245c });
+        const cube10 = new THREE.Mesh(geometry, material10);
+        cube10.position.set(3, 3, 0);  // Position the fourth cube
+        cube10.scale.set(0.20,0.20,0.20);  
+        scene.add(cube10);
+
+
+
+        // Cube 11: White - top 
+        const material11 = new THREE.MeshBasicMaterial({ color: 0xffffff });
+        const cube11 = new THREE.Mesh(geometry, material11);
+        cube11.position.set(-5, -2, 0);  // Position the fourth cube
+        cube11.scale.set(0.50,0.50,0.50);  
+        scene.add(cube11);
+
+
+        // Cube 12: Blue - top 
+        const material12 = new THREE.MeshBasicMaterial({ color: 0x03245c });
+        const cube12 = new THREE.Mesh(geometry, material12);
+        cube12.position.set(0, 3, 0);  // Position the fourth cube
+        cube12.scale.set(0.50,0.50,0.50);  
+        scene.add(cube12);
+
+
+        // Animation loop
+        function animate() {
+          requestAnimationFrame(animate);
+
+          // Rotate all cubes
+          cube1.rotation.x += 0.005;
+          cube1.rotation.y += 0.01;
+
+          cube2.rotation.x += 0.001;
+          cube2.rotation.y += 0.02;
+
+          cube3.rotation.x += 0.02;
+          cube3.rotation.y += 0.01;
+
+          cube4.rotation.x += 0.01;
+          cube4.rotation.y += 0.005;
+
+          cube5.rotation.x += 0.005;
+          cube5.rotation.y += 0.01;
+
+          cube6.rotation.x += 0.001;
+          cube6.rotation.y += 0.02;
+
+          cube7.rotation.x += 0.02;
+          cube7.rotation.y += 0.01;
+
+          cube8.rotation.x += 0.01;
+          cube8.rotation.y += 0.005;
+
+          cube9.rotation.x += 0.02;
+          cube9.rotation.y += 0.01;
+
+          cube10.rotation.x += 0.01;
+          cube10.rotation.y += 0.005;
+
+          cube11.rotation.x += 0.02;
+          cube11.rotation.y += 0.01;
+
+          cube12.rotation.x += 0.01;
+          cube12.rotation.y += 0.005;
+
+          // Render the scene
+          renderer.render(scene, camera);
+        }
+
+        animate();
+      }
+
+      // Call the init function when the window loads
+      window.onload = init;
+
+      // Adjust the renderer size when the window is resized
+      window.addEventListener('resize', () => {
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+      });
+    </script>
+  </head>
+
+  <body class="home">
+    <!-- Content Section -->
+    <div class="content-wrapper">
+      <div class="content-bg">
+        <header>
+          <h1>Sravya Duvvuri</h1>
+          <h2>Student at SJSU - BFA in Digital Media Arts</h2>
+        </header>
+
+        <main>
+          <p>Feel free to check out my resume.</p>
+          <a href="resume.html">Information about me</a> <br>
+          <br>
+          <a href="resume-sravyaduvvuri.pdf" download>Download Resume</a>
+        </main>
+      </div>
+    </div>
+
+    <!-- Three.js Scene Container -->
+    <div id="scene-container" style="width: 100%; height: 100vh;"></div>
+
+    <!-- Footer -->
     <footer>
-      <!-- Start content edits below this line. -->
-      <p>© 2024 by Sravya Duvvuri | <a href="mailto:email@example.com">sravya.duvvuri@sjsu.edu</a></p>
-
-      <!-- Add or remove any networks. -->
-      <ul class="socials">
-        <li>
-          <a href="#" target="_blank"><img src="imagesfolder/icon-logo-twitter.png" alt="icon-logo-twitter">Twitter</a>
-        </li>
-
-        <li>
-          <a href="https://www.linkedin.com/in/sravya-duvvuri/" target="_blank"><img src="imagesfolder/icon-logo-linkedin.png" alt="icon-logo-linkedin">LinkedIn</a>
-        </li>
-        <li>
-
-          <a href="#" target="_blank"><img src="imagesfolder/icon-logo-facebook.png" alt="icon-logo-facebook">Facebook</a>
-        </li>
-
-        <li>
-          <a href="#" target="_blank"><img src="imagesfolder/icon-logo-youtube.png" alt="icon-logo-youtube">YouTube</a>
-        </li>
-
-        <li>
-          <a href="#" target="_blank"><img src="imagesfolder/icon-logo-instagram.png" alt="icon-logo-instagram">Instagram</a>
-        </li>
-
+      <p>© 2024 by Sravya Duvvuri | <a href="mailto:sravya.duvvuri@sjsu.edu">sravya.duvvuri@sjsu.edu</a></p>
+      <ul class="socials"> 
+        <li><a href="#" target="_blank"><img src="imagesfolder/icon-logo-linkedin.png" alt="LinkedIn"></a></li>
       </ul>
-      
-      <!-- End content edits here. -->
     </footer>
-
+  </body>
+</html>
